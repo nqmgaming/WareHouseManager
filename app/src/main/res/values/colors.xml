@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="goldenYellow">#ffca2a</color>
+    <color name="orange">#ffaa2a</color>
+    <color name="vibrantYellow">#ffea2b</color>
+    <color name="primaryColor">#ffea2b</color>
 </resources>
