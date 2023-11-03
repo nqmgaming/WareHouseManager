@@ -1,9 +1,11 @@
-package com.example.warehousemanager
+package com.example.warehousemanager.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.warehousemanager.databinding.ActivityAuthBinding
+import com.example.warehousemanager.preferences.PreferencesApp
+import com.example.warehousemanager.ui.activities.signup.SignupActivity
 
 class AuthActivity : AppCompatActivity() {
     lateinit var binding: ActivityAuthBinding

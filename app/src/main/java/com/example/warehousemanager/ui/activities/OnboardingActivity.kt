@@ -1,9 +1,12 @@
-package com.example.warehousemanager
+package com.example.warehousemanager.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.warehousemanager.R
+import com.example.warehousemanager.adapter.SlideAdapter
 import com.example.warehousemanager.databinding.ActivityOnboardingBinding
+import com.example.warehousemanager.preferences.PreferencesApp
 
 class OnboardingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOnboardingBinding

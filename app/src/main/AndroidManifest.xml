@@ -13,19 +13,25 @@
             android:theme="@style/Theme.WareHouseManager"
             tools:targetApi="31">
         <activity
-                android:name=".SignupActivity"
+                android:name=".ui.activities.signup.PickAddressActivity"
                 android:exported="false"/>
         <activity
-                android:name=".SigningActivity"
+                android:name=".ui.activities.signup.SignupDetailsInfoActivity"
                 android:exported="false"/>
         <activity
-                android:name=".AuthActivity"
+                android:name=".ui.activities.signup.SignupActivity"
                 android:exported="false"/>
         <activity
-                android:name=".MainActivity"
+                android:name=".ui.activities.SigningActivity"
                 android:exported="false"/>
         <activity
-                android:name=".OnboardingActivity"
+                android:name=".ui.activities.AuthActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".ui.activities.MainActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".ui.activities.OnboardingActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

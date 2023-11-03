@@ -19,9 +19,10 @@ class WareHouseDBHelper(context: Context) : SQLiteOpenHelper(
         CREATE TABLE warehouse (
         id TEXT PRIMARY KEY,
         name TEXT,
-        address TEXT,
+        province_id TEXT,
         representative TEXT,
-        phone_number TEXT
+        phone_number TEXT,
+        FOREIGN KEY (province_id) REFERENCES provinces(id)
         )
         """
 
@@ -186,6 +187,14 @@ class WareHouseDBHelper(context: Context) : SQLiteOpenHelper(
     )
 """
 
+        //Table provinces-vietnam
+        val CREATE_PROVINCES_TABLE = """
+        CREATE TABLE provinces (
+        id TEXT PRIMARY KEY,
+        name TEXT
+        )
+        """
+
 
     }
 
@@ -194,60 +203,38 @@ class WareHouseDBHelper(context: Context) : SQLiteOpenHelper(
 
         //warehouse table
         db?.execSQL(CREATE_WAREHOUSE_TABLE)
-        //sample data for warehouse
-        db?.execSQL("INSERT INTO warehouse VALUES ('WH001', 'Kho Hà Nội', 'Hà Nội', 'Nguyễn Văn A', '0123456789')")
-        db?.execSQL("INSERT INTO warehouse VALUES ('WH002', 'Kho Hồ Chí Minh', 'Hồ Chí Minh', 'Nguyễn Văn B', '0123456789')")
-        db?.execSQL("INSERT INTO warehouse VALUES ('WH003', 'Kho Đà Nẵng', 'Đà Nẵng', 'Nguyễn Văn C', '0123456789')")
 
         //warehouse_keeper table
         db?.execSQL(CREATE_WAREHOUSE_KEEPER_TABLE)
-        //sample data for warehouse_keeper
-        db?.execSQL("INSERT INTO warehouse_keeper VALUES ('WK001', 'password1', 'John Doe', 'john@example.com', '0123456789', '1990-01-01', 'WH001')")
-        db?.execSQL("INSERT INTO warehouse_keeper VALUES ('WK002', 'password2', 'Jane Doe', 'jane@example.com', '0123456789', '1990-02-02', 'WH002')")
-        db?.execSQL("INSERT INTO warehouse_keeper VALUES ('WK003', 'password3', 'Bob Smith', 'bob@example.com', '0123456789', '1990-03-03', 'WH003')")
 
         //warehouse_staff table
         db?.execSQL(CREATE_WAREHOUSE_STAFF_TABLE)
-        //sample data for warehouse_staff
-        db?.execSQL("INSERT INTO warehouse_staff VALUES ('WS001', 'password1', 'John Smith', 'john@example.com', '0123456789', '1990-01-01', 'WH001', 'WK001')")
-        db?.execSQL("INSERT INTO warehouse_staff VALUES ('WS002', 'password2', 'Jane Smith', 'jane@example.com', '0123456789', '1990-02-02', 'WH002', 'WK002')")
-        db?.execSQL("INSERT INTO warehouse_staff VALUES ('WS003', 'password3', 'Bob Johnson', 'bob@example.com', '0123456789', '1990-03-03', 'WH003', 'WK003')")
 
         //product_category table
         db?.execSQL(CREATE_PRODUCT_CATEGORY_TABLE)
-        //sample data for product_category
-        db?.execSQL("INSERT INTO product_category VALUES ('PC001', 'Điện thoại', 'Điện thoại')")
-        db?.execSQL("INSERT INTO product_category VALUES ('PC002', 'Máy tính', 'Máy tính')")
-        db?.execSQL("INSERT INTO product_category VALUES ('PC003', 'Máy ảnh', 'Máy ảnh')")
-        db?.execSQL("INSERT INTO product_category VALUES ('PC004', 'Máy quay phim', 'Máy quay phim')")
-        db?.execSQL("INSERT INTO product_category VALUES ('PC005', 'Máy in', 'Máy in')")
 
         //suppliers table
         db?.execSQL(CREATE_SUPPLIERS_TABLE)
         //sample data for suppliers
-        db?.execSQL("INSERT INTO suppliers VALUES ('S001', 'Supplier 1', 'Contact 1', '123456789', 'contact1@example.com', 'Address 1')")
-        db?.execSQL("INSERT INTO suppliers VALUES ('S002', 'Supplier 2', 'Contact 2', '987654321', 'contact2@example.com', 'Address 2')")
-        db?.execSQL("INSERT INTO suppliers VALUES ('S003', 'Supplier 3', 'Contact 3', '456789123', 'contact3@example.com', 'Address 3')")
 
         //products table
         db?.execSQL(CREATE_PRODUCTS_TABLE)
-        //make 20 sample products
-        for (i in 1..20) {
-            db?.execSQL("INSERT INTO products VALUES ('P00$i', 'https://picsum.photos/200', 'Product $i', 'Description $i', 1000000, 500000, 100, 'A1', 1.0, 1, 'S00${i % 3 + 1}', 'PC00${i % 5 + 1}')")
-        }
 
         //shipping_carriers table
         db?.execSQL(CREATE_SHIPPING_CARRIERS_TABLE)
-        db?.execSQL("INSERT INTO shipping_carriers VALUES ('SC001', 'Carrier 1', 'Contact 1', 'contact1@example.com', '123456789', 'Address 1')")
-        db?.execSQL("INSERT INTO shipping_carriers VALUES ('SC002', 'Carrier 2', 'Contact 2', 'contact2@example.com', '987654321', 'Address 2')")
-        db?.execSQL("INSERT INTO shipping_carriers VALUES ('SC003', 'Carrier 3', 'Contact 3', 'contact3@example.com', '456789123', 'Address 3')")
-
         db?.execSQL(CREATE_PURCHASE_ORDERS_TABLE)
         db?.execSQL(CREATE_PURCHASE_ORDER_DETAILS_TABLE)
         db?.execSQL(CREATE_STORES_TABLE)
         db?.execSQL(CREATE_SALES_ORDERS_TABLE)
         db?.execSQL(CREATE_SALES_ORDER_DETAILS_TABLE)
         db?.execSQL(CREATE_PAYMENT_TABLE)
+
+        //provinces table
+        db?.execSQL(CREATE_PROVINCES_TABLE)
+        db?.execSQL("INSERT INTO provinces VALUES ('HN', 'Hà Nội')")
+        db?.execSQL("INSERT INTO provinces VALUES ('HCM', 'Hồ Chí Minh')")
+        db?.execSQL("INSERT INTO provinces VALUES ('HP', 'Hải Phòng')")
+        db?.execSQL("INSERT INTO provinces VALUES ('DN', 'Đà Nẵng')")
 
     }
 

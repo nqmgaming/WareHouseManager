@@ -10,4 +10,8 @@
     <!--    facebook light-->
     <color name="facebookLight">#3b5998</color>
     <color name="google">#DEE4EF</color>
+    <!--    gray-->
+    <color name="gray">#808080</color>
+    <!--    red-->
+    <color name="red">#FF0000</color>
 </resources>

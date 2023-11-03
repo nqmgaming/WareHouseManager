@@ -1,10 +1,11 @@
-package com.example.warehousemanager
+package com.example.warehousemanager.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
+import com.example.warehousemanager.R
 import com.example.warehousemanager.databinding.SlideLayoutBinding
 
 class SlideAdapter(private val context: Context) : PagerAdapter() {
