@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WareHouseManager</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="warehouse_management_4_0">Warehouse Management 4.0</string>
+    <string name="warehouse_title">WareHouse Manager</string>
+    <string name="warehouse_description">Transform your warehouse into a smart system with advanced AI technology.
+    </string>
 </resources>
