@@ -8,5 +8,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //popup when show activity
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+               .replace(R.id.container, WarehouseFragment.newInstance())
+               .commitNow()
+        }
+
     }
 }
