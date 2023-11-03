@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">WareHouseManager</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="warehouse_management_4_0">Warehouse Management 4.0</string>
+    <string name="warehouse_title">WareHouse Manager</string>
+    <string name="warehouse_description">Transform your warehouse into a smart system with advanced AI technology.
+    </string>
+    <string name="get_started">Get Started</string>
+    <string name="facebook_login">Sign in with Facebook</string>
+    <string name="google_login">Sign in with Google</string>
+    <string name="or">or</string>
+    <string name="sign_in_with_email">Sign in with Email</string>
+    <string name="sign_up_with_email">Create an account with Email</string>
+    <string name="confirmation_terms_and_conditions">By signing in you accept \n our Terms of Use and Provacy Policy
+    </string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="email_address">"Email "</string>
+    <string name="continue_">Continue</string>
+    <string name="signup_details_info_title">Detail Infomation\n</string>
+    <string name="persional_details">Persional Information\n</string>
+    <string name="personal_details">Personal infomations</string>
+    <string name="full_name">Full name</string>
+    <string name="map">Address</string>
+    <string name="phone">Phone Number</string>
+    <string name="login_info">Login infomations</string>
+    <string name="warehoue_link">Warehouse name</string>
+    <string name="password">Password</string>
+    <string name="search">Search...</string>
 </resources>

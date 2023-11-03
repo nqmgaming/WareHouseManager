@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295701215200",
+    "project_id": "warehousemanager-7ccf3",
+    "storage_bucket": "warehousemanager-7ccf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295701215200:android:e584f1a244c8a1c5d11d85",
+        "android_client_info": {
+          "package_name": "com.example.warehousemanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCydVdPQ65oSWICUGx6V0Jm58u1L9oPWY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

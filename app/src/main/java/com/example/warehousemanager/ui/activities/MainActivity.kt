@@ -1,7 +1,8 @@
-package com.example.warehousemanager
+package com.example.warehousemanager.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.warehousemanager.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
