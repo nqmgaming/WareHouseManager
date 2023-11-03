@@ -68,7 +68,5 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-storage")
 
-    //search
-    implementation ("com.paulrybitskyi.persistentsearchview:persistentsearchview:1.1.0")
 
 }

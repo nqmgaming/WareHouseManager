@@ -14,16 +14,5 @@ class PickAddressActivity : AppCompatActivity() {
         binding = ActivityPickAddressBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-        with(binding.persistentSearchView){
-            setOnLeftBtnClickListener {
-                finish()
-            }
-            setOnClearInputBtnClickListener{
-            }
-            setVoiceRecognitionDelegate(VoiceRecognitionDelegate(this@PickAddressActivity))
-
-            setSuggestionsDisabled(true)
-        }
     }
 }
