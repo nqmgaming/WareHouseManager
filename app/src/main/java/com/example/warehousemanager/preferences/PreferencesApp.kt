@@ -7,6 +7,7 @@ class PreferencesApp(private val context: Context) {
     private val KEY_FIRST_TIME: String = "first_time"
     private val IS_LOGGED_IN: String = "is_logged_in"
     private val EMAIL = "email"
+    private val ADDRESS = "address"
     private val preferences: SharedPreferences = context.getSharedPreferences("preferences", Context.MODE_PRIVATE)
 
     fun setFirstTime(firstTime: Boolean) {
@@ -35,6 +36,18 @@ class PreferencesApp(private val context: Context) {
 
     fun getEmail(): String {
         return preferences.getString(EMAIL, "")!!
+    }
+
+    fun setAddress(address: String) {
+        preferences.edit().putString(ADDRESS, address).apply()
+    }
+
+    fun getAddress(): String {
+        return preferences.getString(ADDRESS, "")!!
+    }
+
+    fun clearAddress() {
+        preferences.edit().remove(ADDRESS).apply()
     }
 
 

@@ -69,7 +69,7 @@ class SignupActivity : AppCompatActivity() {
             } else {
                 binding.emailTil.helperText = null
                 binding.continueBtn.isEnabled = true
-                preferencesApp.setEmail(email)
+                preferencesApp.setEmail(email.lowercase())
                 Toast.makeText(this, "Verification link sent to $email", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, SignupDetailsInfoActivity::class.java))
                 finish()
