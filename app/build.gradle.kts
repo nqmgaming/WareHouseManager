@@ -51,4 +51,11 @@ dependencies {
 
     //CircleIndicator
     implementation("me.relex:circleindicator:2.1.6")
+
+    //Material Design
+    implementation("com.google.android.material:material:1.4.0")
+
+    //CardView
+    implementation("androidx.cardview:cardview:1.0.0")
+
 }

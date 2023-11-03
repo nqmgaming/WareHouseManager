@@ -6,4 +6,8 @@
     <color name="orange">#ffaa2a</color>
     <color name="vibrantYellow">#ffea2b</color>
     <color name="primaryColor">#ffea2b</color>
+    <color name="facebook">#1877F2</color>
+    <!--    facebook light-->
+    <color name="facebookLight">#3b5998</color>
+    <color name="google">#DEE4EF</color>
 </resources>

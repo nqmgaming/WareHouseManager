@@ -15,7 +15,7 @@ class OnboardingActivity : AppCompatActivity() {
 
         if (!isFirstTime) {
 
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, AuthActivity::class.java))
             finish()
 
         }
@@ -37,14 +37,14 @@ class OnboardingActivity : AppCompatActivity() {
                 binding.viewPager.currentItem += 1
             } else {
                 PreferencesApp(this).setFirstTime(false)
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, AuthActivity::class.java))
                 finish()
             }
         }
 
         binding.btnSkip.setOnClickListener {
             PreferencesApp(this).setFirstTime(false)
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, AuthActivity::class.java))
             finish()
         }
 
@@ -57,9 +57,10 @@ class OnboardingActivity : AppCompatActivity() {
 
             override fun onPageSelected(position: Int) {
                 if (position + 1 == slideAdapter.count) {
-                    binding.btnNext.text = "Get Started"
+                    //set string resource for last page
+                    binding.btnNext.text = getString(R.string.get_started)
                 } else {
-                    binding.btnNext.text = "Next"
+                    binding.btnNext.text = getString(R.string.next)
                 }
             }
 

@@ -7,4 +7,12 @@
     <string name="warehouse_title">WareHouse Manager</string>
     <string name="warehouse_description">Transform your warehouse into a smart system with advanced AI technology.
     </string>
+    <string name="get_started">Get Started</string>
+    <string name="facebook_login">Sign in with Facebook</string>
+    <string name="google_login">Sign in with Google</string>
+    <string name="or">or</string>
+    <string name="sign_in_with_email">Sign in with Email</string>
+    <string name="sign_up_with_email">Create an account with Email</string>
+    <string name="confirmation_terms_and_conditions">By signing in you accept \n our Terms of Use and Provacy Policy
+    </string>
 </resources>
