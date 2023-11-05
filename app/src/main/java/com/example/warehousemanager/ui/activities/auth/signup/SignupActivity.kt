@@ -1,11 +1,10 @@
-package com.example.warehousemanager.ui.activities.signup
+package com.example.warehousemanager.ui.activities.auth.signup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import com.example.warehousemanager.database.dao.WareHouseKeeperDAO
@@ -13,11 +12,9 @@ import com.example.warehousemanager.database.models.WarehouseKeeper
 import com.example.warehousemanager.databinding.ActivitySignupBinding
 import com.example.warehousemanager.preferences.PreferencesApp
 import com.example.warehousemanager.preferences.UserPreference
-import com.example.warehousemanager.ui.activities.AuthActivity
-import com.example.warehousemanager.ui.activities.MainActivity
-import com.google.firebase.auth.ActionCodeSettings
+import com.example.warehousemanager.ui.activities.auth.AuthActivity
+import com.example.warehousemanager.ui.activities.main.MainActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.auth.User
 
 class SignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding

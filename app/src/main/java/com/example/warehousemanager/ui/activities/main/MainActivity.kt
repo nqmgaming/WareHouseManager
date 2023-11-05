@@ -1,4 +1,4 @@
-package com.example.warehousemanager.ui.activities
+package com.example.warehousemanager.ui.activities.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

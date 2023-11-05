@@ -1,4 +1,4 @@
-package com.example.warehousemanager.ui.activities.signup
+package com.example.warehousemanager.ui.activities.auth.signup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,13 +9,12 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import com.example.warehousemanager.database.dao.WareHouseDAO
 import com.example.warehousemanager.database.dao.WareHouseKeeperDAO
-import com.example.warehousemanager.database.models.Province
 import com.example.warehousemanager.database.models.Warehouse
 import com.example.warehousemanager.database.models.WarehouseKeeper
 import com.example.warehousemanager.databinding.ActivitySignupDetailsInfoBinding
 import com.example.warehousemanager.preferences.PreferencesApp
 import com.example.warehousemanager.preferences.UserPreference
-import com.example.warehousemanager.ui.activities.MainActivity
+import com.example.warehousemanager.ui.activities.main.MainActivity
 
 class SignupDetailsInfoActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupDetailsInfoBinding

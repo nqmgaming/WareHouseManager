@@ -1,4 +1,4 @@
-package com.example.warehousemanager.ui.activities.signup
+package com.example.warehousemanager.ui.activities.auth.signup
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

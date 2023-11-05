@@ -10,7 +10,7 @@ import com.example.warehousemanager.database.models.Province
 import com.example.warehousemanager.databinding.ItemProvinceBinding
 import com.example.warehousemanager.preferences.PreferencesApp
 import com.example.warehousemanager.preferences.UserPreference
-import com.example.warehousemanager.ui.activities.signup.SignupDetailsInfoActivity
+import com.example.warehousemanager.ui.activities.auth.signup.SignupDetailsInfoActivity
 
 class ProvinceAdapter(
     private val context: Context,
