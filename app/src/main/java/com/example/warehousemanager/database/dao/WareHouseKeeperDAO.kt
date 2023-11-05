@@ -130,4 +130,23 @@ class WareHouseKeeperDAO(context: Context) {
             db.close()
         }
     }
+
+
+    //set new password by id
+    fun setNewPassword(id: String, password: String): Boolean {
+        val db = dbHelper.writableDatabase
+        val values = ContentValues().apply {
+            put("password", password)
+        }
+        val result: Int
+        return try {
+            result = db.update("warehouse_keeper", values, "id = ?", arrayOf(id))
+            result != -1
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        } finally {
+            db.close()
+        }
+    }
 }

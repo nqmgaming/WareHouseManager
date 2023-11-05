@@ -13,6 +13,7 @@ import com.example.warehousemanager.databinding.ActivitySigninBinding
 import com.example.warehousemanager.preferences.PreferencesApp
 import com.example.warehousemanager.preferences.UserPreference
 import com.example.warehousemanager.ui.activities.auth.AuthActivity
+import com.example.warehousemanager.ui.activities.auth.forgot.ForgotPasswordActivity
 import com.example.warehousemanager.ui.activities.auth.signup.SignupActivity
 import com.example.warehousemanager.ui.activities.main.MainActivity
 
@@ -39,6 +40,9 @@ class SigningActivity : AppCompatActivity() {
 
         binding.signupLl.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
+        }
+        binding.forgotPasswordTv.setOnClickListener {
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
 
         binding.emailEt.addTextChangedListener(object : TextWatcher {
@@ -167,7 +171,7 @@ class SigningActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            //regax for link warehouse only allow a-z, 0-9
+            //regex for link warehouse only allow a-z, 0-9
 
             if (!regex.matches(linkWarehouse)) {
                 binding.linkWarehouseTil.helperText = "Link warehouse is invalid"
