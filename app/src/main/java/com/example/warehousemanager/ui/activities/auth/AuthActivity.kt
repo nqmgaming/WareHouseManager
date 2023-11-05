@@ -24,6 +24,7 @@ class AuthActivity : AppCompatActivity() {
 
         binding.signInWithEmailTv.setOnClickListener {
             startActivity(Intent(this, SigningActivity::class.java))
+
         }
 
         binding.signUpWithEmailTv.setOnClickListener {
