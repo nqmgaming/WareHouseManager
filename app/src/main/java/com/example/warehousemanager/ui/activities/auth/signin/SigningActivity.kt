@@ -1,4 +1,4 @@
-package com.example.warehousemanager.ui.activities
+package com.example.warehousemanager.ui.activities.auth.signin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +12,9 @@ import com.example.warehousemanager.database.dao.WareHouseKeeperDAO
 import com.example.warehousemanager.databinding.ActivitySigninBinding
 import com.example.warehousemanager.preferences.PreferencesApp
 import com.example.warehousemanager.preferences.UserPreference
-import com.example.warehousemanager.ui.activities.signup.SignupActivity
+import com.example.warehousemanager.ui.activities.auth.AuthActivity
+import com.example.warehousemanager.ui.activities.auth.signup.SignupActivity
+import com.example.warehousemanager.ui.activities.main.MainActivity
 
 class SigningActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySigninBinding
