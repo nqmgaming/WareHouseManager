@@ -37,5 +37,59 @@ class PickAddressActivity : AppCompatActivity() {
             binding.provinceRv.adapter = provinceAdapter
             provinceAdapter.notifyDataSetChanged()
         }
+
+        binding.searchEt.addTextChangedListener(object : android.text.TextWatcher {
+            override fun afterTextChanged(s: android.text.Editable?) {
+                if (s.toString().trim().isNotEmpty()) {
+                    val filteredList = ArrayList<Province>()
+                    for (province in provinceList) {
+                        if (province.name.lowercase().contains(s.toString().lowercase())) {
+                            filteredList.add(province)
+                        }
+                    }
+                    refreshList(filteredList)
+
+                } else {
+                    refreshList(provinceList)
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                if (s.toString().trim().isNotEmpty()) {
+                    val filteredList = ArrayList<Province>()
+                    for (province in provinceList) {
+                        if (province.name.lowercase().contains(s.toString().lowercase())) {
+                            filteredList.add(province)
+                        }
+                    }
+                    refreshList(filteredList)
+
+                } else {
+                    refreshList(provinceList)
+                }
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (s.toString().trim().isNotEmpty()) {
+                    val filteredList = ArrayList<Province>()
+                    for (province in provinceList) {
+                        if (province.name.lowercase().contains(s.toString().lowercase())) {
+                            filteredList.add(province)
+                        }
+                    }
+                    refreshList(filteredList)
+
+                } else {
+                    refreshList(provinceList)
+                }
+            }
+        })
+    }
+
+    fun refreshList(list: ArrayList<Province>) {
+        provinceAdapter = ProvinceAdapter(this, list)
+        binding.provinceRv.adapter = provinceAdapter
+        provinceAdapter.notifyDataSetChanged()
+
     }
 }

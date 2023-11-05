@@ -8,16 +8,22 @@ import android.text.TextWatcher
 import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
+import com.example.warehousemanager.database.dao.WareHouseKeeperDAO
+import com.example.warehousemanager.database.models.WarehouseKeeper
 import com.example.warehousemanager.databinding.ActivitySignupBinding
 import com.example.warehousemanager.preferences.PreferencesApp
+import com.example.warehousemanager.preferences.UserPreference
 import com.example.warehousemanager.ui.activities.AuthActivity
 import com.example.warehousemanager.ui.activities.MainActivity
 import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.auth.User
 
 class SignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupBinding
     val auth: FirebaseAuth = FirebaseAuth.getInstance()
+    lateinit var warehouseKeeper: WarehouseKeeper
+    lateinit var wareHouseKeeperDAO: WareHouseKeeperDAO
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val preferencesApp = PreferencesApp(this)
@@ -34,12 +40,16 @@ class SignupActivity : AppCompatActivity() {
             startActivity(Intent(this, AuthActivity::class.java))
             finish()
         }
-
+        wareHouseKeeperDAO = WareHouseKeeperDAO(this)
         binding.emailEt.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (s.toString().isEmpty()) {
                     binding.emailTil.helperText = "Email is required"
                     binding.continueBtn.isEnabled = false
+                } else if (wareHouseKeeperDAO.isExistWarehouseKeeper(s.toString())) {
+                    binding.emailTil.helperText = "Email already exists"
+                    binding.continueBtn.isEnabled = false
+
                 } else if (!Patterns.EMAIL_ADDRESS.matcher(s.toString()).matches()) {
                     binding.emailTil.helperText = "Email is invalid"
                     binding.continueBtn.isEnabled = false
@@ -50,11 +60,37 @@ class SignupActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                if (s.toString().isEmpty()) {
+                    binding.emailTil.helperText = "Email is required"
+                    binding.continueBtn.isEnabled = false
+                } else if (wareHouseKeeperDAO.isExistWarehouseKeeper(s.toString())) {
+                    binding.emailTil.helperText = "Email already exists"
+                    binding.continueBtn.isEnabled = false
 
+                } else if (!Patterns.EMAIL_ADDRESS.matcher(s.toString()).matches()) {
+                    binding.emailTil.helperText = "Email is invalid"
+                    binding.continueBtn.isEnabled = false
+                } else {
+                    binding.emailTil.helperText = null
+                    binding.continueBtn.isEnabled = true
+                }
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // Do nothing
+                if (s.toString().isEmpty()) {
+                    binding.emailTil.helperText = "Email is required"
+                    binding.continueBtn.isEnabled = false
+                } else if (wareHouseKeeperDAO.isExistWarehouseKeeper(s.toString())) {
+                    binding.emailTil.helperText = "Email already exists"
+                    binding.continueBtn.isEnabled = false
+
+                } else if (!Patterns.EMAIL_ADDRESS.matcher(s.toString()).matches()) {
+                    binding.emailTil.helperText = "Email is invalid"
+                    binding.continueBtn.isEnabled = false
+                } else {
+                    binding.emailTil.helperText = null
+                    binding.continueBtn.isEnabled = true
+                }
             }
         })
 
@@ -69,7 +105,8 @@ class SignupActivity : AppCompatActivity() {
             } else {
                 binding.emailTil.helperText = null
                 binding.continueBtn.isEnabled = true
-                preferencesApp.setEmail(email.lowercase())
+                val userPreference = UserPreference(this)
+                userPreference.setEmail(email.lowercase())
                 Toast.makeText(this, "Verification link sent to $email", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, SignupDetailsInfoActivity::class.java))
                 finish()

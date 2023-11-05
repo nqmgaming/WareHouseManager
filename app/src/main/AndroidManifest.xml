@@ -23,6 +23,7 @@
                 android:exported="false"/>
         <activity
                 android:name=".ui.activities.SigningActivity"
+                android:windowSoftInputMode="adjustResize"
                 android:exported="false"/>
         <activity
                 android:name=".ui.activities.AuthActivity"

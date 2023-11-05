@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.warehousemanager.database.models.Province
 import com.example.warehousemanager.databinding.ItemProvinceBinding
 import com.example.warehousemanager.preferences.PreferencesApp
+import com.example.warehousemanager.preferences.UserPreference
 import com.example.warehousemanager.ui.activities.signup.SignupDetailsInfoActivity
 
 class ProvinceAdapter(
@@ -24,12 +25,12 @@ class ProvinceAdapter(
 
         fun bind(
             province: Province,
-            preferences: PreferencesApp = PreferencesApp(binding.root.context)
+            preferences: UserPreference = UserPreference(binding.root.context)
         ) {
             binding.provinceTv.text = province.name
 
             binding.itemProvinceCl.setOnClickListener {
-                preferences.setAddress(province.name)
+                preferences.setAddress(province)
                 Toast.makeText(binding.root.context, province.name, Toast.LENGTH_SHORT).show()
                 Intent(binding.root.context, SignupDetailsInfoActivity::class.java).also {
                     binding.root.context.startActivity(it)
