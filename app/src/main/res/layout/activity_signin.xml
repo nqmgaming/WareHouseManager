@@ -113,7 +113,7 @@
         android:textColor="@color/orange"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/password_til"
         app:layout_constraintTop_toBottomOf="@id/password_til" />
 
     <Button
@@ -124,6 +124,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="20dp"
+        android:enabled="false"
         android:background="@drawable/background_button"
         android:text="@string/sign_in"
         android:textColor="@color/white"
@@ -173,14 +174,14 @@
         app:layout_constraintTop_toBottomOf="@id/signup_ll" />
 
     <LinearLayout
-        android:id="@+id/support_ll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/warehouse_4_0_iv">
+            android:id="@+id/support_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/warehouse_4_0_iv" tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:layout_width="wrap_content"
