@@ -27,6 +27,12 @@ class UserPreference(context: Context) {
     //password
     private val PASSWORD = "password"
 
+    //warehouse
+    private val WAREHOUSE = "warehouse"
+
+    //warehouse keeper
+    private val WAREHOUSE_KEEPER = "warehouse_keeper"
+
     //set full name
     fun setFullName(fullName: String) {
         preferences.edit().putString(FULL_NAME, fullName).apply()
@@ -96,6 +102,26 @@ class UserPreference(context: Context) {
     //get password
     fun getPassword(): String {
         return preferences.getString(PASSWORD, "")!!
+    }
+
+    //set warehouse
+    fun setWarehouse(warehouse: String) {
+        preferences.edit().putString(WAREHOUSE, warehouse).apply()
+    }
+
+    //get warehouse
+    fun getWarehouse(): String {
+        return preferences.getString(WAREHOUSE, "")!!
+    }
+
+    //set warehouse keeper
+    fun setWarehouseKeeper(warehouseKeeper: String) {
+        preferences.edit().putString(WAREHOUSE_KEEPER, warehouseKeeper).apply()
+    }
+
+    //get warehouse keeper
+    fun getWarehouseKeeper(): String {
+        return preferences.getString(WAREHOUSE_KEEPER, "")!!
     }
 
     //clear all preferences user and not clean all preferences

@@ -86,4 +86,48 @@ class WareHouseKeeperDAO(context: Context) {
             db.close()
         }
     }
+
+    //check password warehouse keeper is correct
+    fun isCorrectPassword(id: String, password: String): Boolean {
+        val db = dbHelper.readableDatabase
+        val query = "SELECT * FROM warehouse_keeper WHERE id = ? AND password = ?"
+        val cursor = db.rawQuery(query, arrayOf(id, password))
+        return try {
+            cursor.moveToFirst()
+            cursor.count > 0
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        } finally {
+            cursor.close()
+            db.close()
+        }
+    }
+
+    //get warehouse keeper by id and not include password
+    fun getWarehouseKeeperById(id: String): WarehouseKeeper? {
+        val db = dbHelper.readableDatabase
+        val query = "SELECT * FROM warehouse_keeper WHERE id = ?"
+        val cursor = db.rawQuery(query, arrayOf(id))
+        return try {
+            cursor.moveToFirst()
+            val keeper = WarehouseKeeper(
+                cursor.getString(0),
+                cursor.getString(1),
+                cursor.getString(2),
+                cursor.getString(3),
+                cursor.getString(4),
+                cursor.getString(5),
+                cursor.getString(6)
+            )
+            keeper.password = ""
+            keeper
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        } finally {
+            cursor.close()
+            db.close()
+        }
+    }
 }

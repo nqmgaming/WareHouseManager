@@ -83,4 +83,31 @@ class WareHouseDAO(context: Context) {
         }
     }
 
+
+
+    //get warehouse by id
+    fun getWarehouseById(id: String): Warehouse? {
+        val db = dbHelper.readableDatabase
+        val query = "SELECT * FROM warehouse WHERE id = ?"
+        val cursor = db.rawQuery(query, arrayOf(id))
+        return try {
+            cursor.moveToFirst()
+            val warehouse = Warehouse(
+                cursor.getString(0),
+                cursor.getString(1),
+                cursor.getString(2),
+                cursor.getString(3),
+                cursor.getString(4),
+
+                )
+            warehouse
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        } finally {
+            cursor.close()
+            db.close()
+        }
+    }
+
 }

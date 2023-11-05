@@ -2,7 +2,7 @@ package com.example.warehousemanager.database.models
 
 data class WarehouseKeeper(
     val id: String,
-    val password: String,
+    var password: String,
     val name: String,
     val email: String,
     val phoneNumber: String,
