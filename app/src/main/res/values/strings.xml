@@ -29,13 +29,24 @@
     <string name="password">Password</string>
     <string name="search">Search...</string>
     <string name="contact_support">Support: 0366212422</string>
-    <string name="forgot_password"><u>Forgot your password?</u></string>
+    <string name="forgot_password">
+        <u>Forgot your password?</u>
+    </string>
     <string name="sign_in">Sign in</string>
-    <string name="dont_have_an_account"><u>Don\'t have an account?</u></string>
+    <string name="dont_have_an_account">
+        <u>Don\'t have an account?</u>
+    </string>
     <string name="sign_up">Sign up</string>
     <string name="forgot_your_password">Forgot password?</string>
     <string name="enter_your_warehouse_link_and_email">Enter your warehouse name and email</string>
     <string name="set_again_your_password">Set again your password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="set_password">Set password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="analysis">Analysis</string>
+    <string name="invoice">Invoice</string>
+    <string name="products">Products</string>
+    <string name="notifications">Notifications</string>
+    <string name="more">More</string>
 </resources>

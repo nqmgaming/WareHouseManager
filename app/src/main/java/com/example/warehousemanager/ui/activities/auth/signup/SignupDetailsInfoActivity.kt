@@ -103,7 +103,7 @@ class SignupDetailsInfoActivity : AppCompatActivity() {
                 }
 
                 if (wareHouseDAO.insertWarehouse(warehouse) && warehouseKeeperDAO.insertWarehouseKeeper(warehouseKeeper)) {
-//                    preferencesApp.setIsLoggedIn(true)
+                    preferencesApp.setIsLoggedIn(true)
                     Toast.makeText(this, "Sign up successfully", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()

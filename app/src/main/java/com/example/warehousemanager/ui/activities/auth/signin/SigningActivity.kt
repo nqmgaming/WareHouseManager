@@ -237,6 +237,9 @@ class SigningActivity : AppCompatActivity() {
             userPreference.setWarehouse(linkWarehouse)
             userPreference.setEmail(email)
 
+            val preferencesApp = PreferencesApp(this)
+            preferencesApp.setIsLoggedIn(true)
+
 
 
             Toast.makeText(this, "Signing in...", Toast.LENGTH_SHORT).show()
