@@ -42,7 +42,7 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -57,7 +57,7 @@ dependencies {
     implementation("me.relex:circleindicator:2.1.6")
 
     //Material Design
-    implementation("com.google.android.material:material:1.4.0")
+    implementation("com.google.android.material:material:1.10.0")
 
     //CardView
     implementation("androidx.cardview:cardview:1.0.0")
@@ -75,6 +75,6 @@ dependencies {
     implementation ("com.github.dhaval2404:imagepicker:2.1")
 
     //Glide
-    implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
 }
