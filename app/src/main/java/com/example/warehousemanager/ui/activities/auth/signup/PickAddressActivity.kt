@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.warehousemanager.R
+import com.example.warehousemanager.adapter.OnProvinceSelectedListener
 import com.example.warehousemanager.adapter.ProvinceAdapter
 import com.example.warehousemanager.database.dao.ProvinceDAO
 import com.example.warehousemanager.database.models.Province
 import com.example.warehousemanager.databinding.ActivityPickAddressBinding
 
-class PickAddressActivity : AppCompatActivity() {
+class PickAddressActivity : AppCompatActivity() , OnProvinceSelectedListener {
     private lateinit var binding: ActivityPickAddressBinding
     private lateinit var provinceList: ArrayList<Province>
     private lateinit var provinceAdapter: ProvinceAdapter
@@ -33,7 +34,7 @@ class PickAddressActivity : AppCompatActivity() {
         provinceList = provinceDAO.getAllProvinces()
 
         if (provinceList.size > 0) {
-            provinceAdapter = ProvinceAdapter(this, provinceList)
+            provinceAdapter = ProvinceAdapter(this, provinceList, this)
             binding.provinceRv.adapter = provinceAdapter
             provinceAdapter.notifyDataSetChanged()
         }
@@ -87,9 +88,16 @@ class PickAddressActivity : AppCompatActivity() {
     }
 
     fun refreshList(list: ArrayList<Province>) {
-        provinceAdapter = ProvinceAdapter(this, list)
+        provinceAdapter = ProvinceAdapter(this, list, this)
         binding.provinceRv.adapter = provinceAdapter
         provinceAdapter.notifyDataSetChanged()
 
+    }
+
+    override fun onProvinceSelected(province: Province) {
+        // Navigate to SignupDetailsInfoActivity
+        Intent(this, SignupDetailsInfoActivity::class.java).also { startActivity(it) }
+        // Finish this activity
+        finish()
     }
 }

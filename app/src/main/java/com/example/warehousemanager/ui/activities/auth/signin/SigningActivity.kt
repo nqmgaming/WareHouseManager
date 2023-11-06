@@ -240,6 +240,7 @@ class SigningActivity : AppCompatActivity() {
             val preferencesApp = PreferencesApp(this)
             preferencesApp.setIsLoggedIn(true)
 
+            startActivity(Intent(this, MainActivity::class.java))
 
 
             Toast.makeText(this, "Signing in...", Toast.LENGTH_SHORT).show()

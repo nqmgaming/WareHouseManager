@@ -105,8 +105,10 @@ class SignupDetailsInfoActivity : AppCompatActivity() {
                 if (wareHouseDAO.insertWarehouse(warehouse) && warehouseKeeperDAO.insertWarehouseKeeper(warehouseKeeper)) {
                     preferencesApp.setIsLoggedIn(true)
                     Toast.makeText(this, "Sign up successfully", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
+                    Intent(this, MainActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(this)
+                    }
                 } else {
                     Toast.makeText(this, "Sign up failed", Toast.LENGTH_SHORT).show()
                 }
