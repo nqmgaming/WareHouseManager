@@ -36,6 +36,7 @@ class WareHouseDBHelper(context: Context) : SQLiteOpenHelper(
         phone_number TEXT,
         birthday DATE,
         warehouse_id TEXT,
+        avatar TEXT,
         FOREIGN KEY (warehouse_id) REFERENCES warehouse(id)
         )
         """
@@ -51,6 +52,7 @@ class WareHouseDBHelper(context: Context) : SQLiteOpenHelper(
         birthday DATE,
         warehouse_id TEXT,
         keeper_id TEXT,
+        avatar TEXT,
         FOREIGN KEY (warehouse_id) REFERENCES warehouse(id),
         FOREIGN KEY (keeper_id) REFERENCES warehouse_keeper(id)
     )

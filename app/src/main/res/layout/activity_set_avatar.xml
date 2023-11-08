@@ -1,13 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SetAvatarActivity">
-
-    <androidx.appcompat.widget.Toolbar
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.avatar.SetAvatarActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/set_avatar"
+            android:id="@+id/set_avatar_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/avatar_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set_avatar_tv"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_edit"
+            android:background="@drawable/background_button"
+            android:text="@string/edit"
+            android:layout_margin="50dp"
+            android:visibility="gone"
+            android:id="@+id/edit_avatar_btn"
+            app:layout_constraintTop_toBottomOf="@id/avatar_iv"
+            app:layout_constraintStart_toStartOf="@id/avatar_iv"
+            app:layout_constraintEnd_toEndOf="@id/avatar_iv"/>
+
+
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button"
+            android:text="@string/choose_avatar"
+            android:textColor="@color/white"
+            android:id="@+id/choose_avatar_btn"
+            android:visibility="visible"
+            android:layout_margin="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_iv"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:id="@+id/ok_btn"
+            android:layout_margin="150dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_iv"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button"
+            android:text="@string/skip"
+            android:textColor="@color/black"
+            android:id="@+id/next_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choose_avatar_btn"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

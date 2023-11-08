@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.warehousemanager.R
 import com.example.warehousemanager.adapter.OnProvinceSelectedListener
 import com.example.warehousemanager.adapter.ProvinceAdapter
 import com.example.warehousemanager.database.dao.ProvinceDAO
@@ -23,7 +22,7 @@ class PickAddressActivity : AppCompatActivity() , OnProvinceSelectedListener {
         setContentView(view)
 
         binding.toolbar.setNavigationOnClickListener {
-            startActivity(Intent(this, SignupDetailsInfoActivity::class.java))
+            startActivity(Intent(this, SignupDetailInfoActivity::class.java))
             finish()
         }
 
@@ -96,7 +95,7 @@ class PickAddressActivity : AppCompatActivity() , OnProvinceSelectedListener {
 
     override fun onProvinceSelected(province: Province) {
         // Navigate to SignupDetailsInfoActivity
-        Intent(this, SignupDetailsInfoActivity::class.java).also { startActivity(it) }
+        Intent(this, SignupDetailInfoActivity::class.java).also { startActivity(it) }
         // Finish this activity
         finish()
     }

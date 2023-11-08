@@ -1,7 +1,6 @@
 package com.example.warehousemanager.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -10,7 +9,6 @@ import com.example.warehousemanager.database.models.Province
 import com.example.warehousemanager.databinding.ItemProvinceBinding
 import com.example.warehousemanager.preferences.PreferencesApp
 import com.example.warehousemanager.preferences.UserPreference
-import com.example.warehousemanager.ui.activities.auth.signup.SignupDetailsInfoActivity
 
 interface OnProvinceSelectedListener {
     fun onProvinceSelected(province: Province)

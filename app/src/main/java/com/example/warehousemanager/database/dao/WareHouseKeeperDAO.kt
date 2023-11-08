@@ -19,6 +19,7 @@ class WareHouseKeeperDAO(context: Context) {
             put("phone_number", keeper.phoneNumber)
             put("birthday", keeper.birthday)
             put("warehouse_id", keeper.warehouseId)
+            put("avatar", keeper.avatar)
         }
         val result: Long
         return try {
@@ -42,6 +43,7 @@ class WareHouseKeeperDAO(context: Context) {
             put("phone_number", keeper.phoneNumber)
             put("birthday", keeper.birthday)
             put("warehouse_id", keeper.warehouseId)
+            put("avatar", keeper.avatar)
         }
         val result: Int
         return try {
@@ -118,7 +120,8 @@ class WareHouseKeeperDAO(context: Context) {
                 cursor.getString(3),
                 cursor.getString(4),
                 cursor.getString(5),
-                cursor.getString(6)
+                cursor.getString(6),
+                cursor.getString(7)
             )
             keeper.password = ""
             keeper

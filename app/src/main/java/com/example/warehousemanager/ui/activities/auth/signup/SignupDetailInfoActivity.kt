@@ -14,9 +14,10 @@ import com.example.warehousemanager.database.models.WarehouseKeeper
 import com.example.warehousemanager.databinding.ActivitySignupDetailsInfoBinding
 import com.example.warehousemanager.preferences.PreferencesApp
 import com.example.warehousemanager.preferences.UserPreference
+import com.example.warehousemanager.ui.activities.avatar.SetAvatarActivity
 import com.example.warehousemanager.ui.activities.main.MainActivity
 
-class SignupDetailsInfoActivity : AppCompatActivity() {
+class SignupDetailInfoActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignupDetailsInfoBinding
     private lateinit var userPreference: UserPreference
 
@@ -63,7 +64,6 @@ class SignupDetailsInfoActivity : AppCompatActivity() {
                 binding.continueBtn.isEnabled = false
             } else {
                 val fullName = binding.fullNameEt.text.toString().trim()
-                val address = binding.mapEt.text.toString().trim()
                 val phoneNumber = binding.phoneEt.text.toString().trim()
                 val linkWarehouse = binding.linkWarehouseEt.text.toString().trim()
                 val email = binding.emailEt.text.toString().trim()
@@ -84,7 +84,8 @@ class SignupDetailsInfoActivity : AppCompatActivity() {
                     email = email,
                     phoneNumber = phoneNumber,
                     birthday = null,
-                    warehouseId = linkWarehouse
+                    warehouseId = linkWarehouse,
+                    avatar = null
                 )
 
                 wareHouseDAO = WareHouseDAO(this)
@@ -105,8 +106,7 @@ class SignupDetailsInfoActivity : AppCompatActivity() {
                 if (wareHouseDAO.insertWarehouse(warehouse) && warehouseKeeperDAO.insertWarehouseKeeper(warehouseKeeper)) {
                     preferencesApp.setIsLoggedIn(true)
                     Toast.makeText(this, "Sign up successfully", Toast.LENGTH_SHORT).show()
-                    Intent(this, MainActivity::class.java).apply {
-                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    Intent(this, SetAvatarActivity::class.java).apply {
                         startActivity(this)
                     }
                 } else {

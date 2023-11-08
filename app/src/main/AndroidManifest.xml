@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -11,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WareHouseManager"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".SetAvatarActivity"
+            android:name=".ui.activities.product.AddProductActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.activities.avatar.SetAvatarActivity"
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".ui.activities.auth.forgot.SetPasswordActivity"
             android:exported="false" />
@@ -25,7 +29,7 @@
             android:name=".ui.activities.auth.signup.PickAddressActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.auth.signup.SignupDetailsInfoActivity"
+            android:name=".ui.activities.auth.signup.SignupDetailInfoActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.auth.signup.SignupActivity"
@@ -42,7 +46,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.activities.onboarding.OnboardingActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

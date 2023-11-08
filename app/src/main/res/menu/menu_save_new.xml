@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    searh icon-->
+    <item
+            android:id="@+id/action_save"
+            android:icon="@drawable/ic_save"
+            android:title="@string/save"
+            android:orderInCategory="100"
+            app:showAsAction="always"/>
+
+    <!--    sort icon-->
+    <item
+            android:id="@+id/action_add_new"
+            android:icon="@drawable/ic_sort"
+            android:title="@string/save_add_new"
+            android:orderInCategory="100"
+            />
+
+</menu>

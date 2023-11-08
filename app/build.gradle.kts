@@ -77,4 +77,7 @@ dependencies {
     //Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
+    //AvatarImageGenerator
+    implementation ("com.github.amoskorir:avatarimagegenerator:1.5.0")
+
 }

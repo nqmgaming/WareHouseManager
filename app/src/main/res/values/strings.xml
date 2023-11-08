@@ -49,4 +49,13 @@
     <string name="products">Products</string>
     <string name="notifications">Notifications</string>
     <string name="more">More</string>
+    <string name="set_avatar">Set avavtar</string>
+    <string name="choose_avatar">Choose avatar</string>
+    <string name="ok">OK</string>
+    <string name="edit">Edit</string>
+    <string name="sort">Sort</string>
+    <string name="add_product">Add product</string>
+    <string name="empty_products">You dont have product</string>
+    <string name="save">Save</string>
+    <string name="save_add_new">Save and add new</string>
 </resources>

@@ -105,7 +105,7 @@ class SignupActivity : AppCompatActivity() {
                 val userPreference = UserPreference(this)
                 userPreference.setEmail(email.lowercase())
                 Toast.makeText(this, "Verification link sent to $email", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, SignupDetailsInfoActivity::class.java))
+                startActivity(Intent(this, SignupDetailInfoActivity::class.java))
                 finish()
 
 //                //action code

@@ -6,6 +6,7 @@ data class WarehouseKeeper(
     val name: String,
     val email: String,
     val phoneNumber: String,
-    val birthday: String?, // You might want to use a proper date type here
-    val warehouseId: String // Reference to the corresponding warehouse
+    val birthday: String?,
+    val warehouseId: String,
+    val avatar: String?
 )
