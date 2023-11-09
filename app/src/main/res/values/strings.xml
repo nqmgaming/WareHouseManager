@@ -58,4 +58,7 @@
     <string name="empty_products">You dont have product</string>
     <string name="save">Save</string>
     <string name="save_add_new">Save and add new</string>
+    <string name="code_product">Code product</string>
+    <string name="name_product">Name product</string>
+    <string name="description_product">Description product</string>
 </resources>

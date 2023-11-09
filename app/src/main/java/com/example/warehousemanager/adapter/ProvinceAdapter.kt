@@ -15,7 +15,7 @@ interface OnProvinceSelectedListener {
 }
 
 class ProvinceAdapter(
-    private val context: Context,
+    context: Context,
     private val provincesList: ArrayList<Province>,
     private val listener: OnProvinceSelectedListener
 ) : RecyclerView.Adapter<ProvinceAdapter.ProvinceViewHolder>() {

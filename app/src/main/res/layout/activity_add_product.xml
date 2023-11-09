@@ -19,4 +19,322 @@
             app:navigationIcon="@drawable/ic_close"
             app:menu="@menu/menu_save_new"/>
 
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:visibility="visible"
+                            tools:listitem="@layout/item_photo_product"
+                            android:orientation="horizontal"
+                            android:id="@+id/image_product_rv"/>
+
+                    <ImageView
+                            app:layout_constraintStart_toEndOf="@id/image_product_rv"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/ic_add_photo"
+                            android:id="@+id/add_photo_iv"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/code_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/code_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true"
+                    app:endIconMode="custom"
+                    app:endIconDrawable="@drawable/ic_qr_code_scanner"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="30">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/code_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/name_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_product_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/description_product_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/description_product"
+                    app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:helperTextEnabled="true">
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/description_product_et"
+                        android:inputType="textMultiLine"
+                        android:gravity="top|start"
+                        android:scrollbars="vertical"
+                        android:background="@null"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 </LinearLayout>
